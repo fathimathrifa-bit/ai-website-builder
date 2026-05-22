@@ -22,3 +22,14 @@ If you'd like to run the repository on your local machine, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/fathimathrifa-bit/ai-website-builder.git](https://github.com/fathimathrifa-bit/ai-website-builder.git)
+
+
+cd backend
+npm install  # (or pip install if you used python)
+# Add your API keys to a .env file here!
+npm start
+
+
+cd ../frontend
+npm install
+npm start
