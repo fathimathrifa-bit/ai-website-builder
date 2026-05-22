@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Website Workspace Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand"><h2>AI<span>Studio</span></h2></div>
+            <div class="control-group">
+                <label for="promptInput">Describe your web concept layout:</label>
+                <textarea id="promptInput" placeholder="e.g., A sleek agency dark layout grid..."></textarea>
+                <button id="generateBtn">Build Interface</button>
+            </div>
+            <div class="bonus-features">
+                <h3>Target Re-generation</h3>
+                <select id="sectionTarget">
+                    <option value="">Full Workspace Page</option>
+                    <option value="Hero Header Section">Hero Component Only</option>
+                    <option value="Features Showcase Section">Feature Grid Only</option>
+                    <option value="Footer Layout Section">Footer Component Only</option>
+                </select>
+            </div>
+            <div class="history-section">
+                <h3>Saved Layout Contexts</h3>
+                <ul id="historyList"></ul>
+                <button id="clearHistoryBtn" class="secondary-btn">Reset Workspace Layouts</button>
+            </div>
+        </aside>
+
+        <main class="workspace">
+            <header class="workspace-header">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="preview">Visual Execution Frame</button>
+                    <button class="tab-btn" data-tab="html-code">Raw HTML5</button>
+                    <button class="tab-btn" data-tab="css-code">Raw CSS3</button>
+                </div>
+                <button id="copyBtn">Copy Source Code</button>
+            </header>
+
+            <div class="content-display">
+                <div id="loader" class="loader-overlay hidden">
+                    <div class="spinner"></div>
+                    <p>Architecting code panels via Gemini AI pipeline...</p>
+                </div>
+                <div id="previewTab" class="tab-content active">
+                    <iframe id="previewFrame" title="Sandbox Display Matrix"></iframe>
+                </div>
+                <div id="html-codeTab" class="tab-content text-editor-view">
+                    <pre><code id="htmlCodeDisplay"></code></pre>
+                </div>
+                <div id="css-codeTab" class="tab-content text-editor-view">
+                    <pre><code id="cssCodeDisplay"></code></pre>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
